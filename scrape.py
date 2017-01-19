@@ -44,4 +44,8 @@ while True:
     
     courses.to_csv('courses.csv',index=False) # update 'Open' status in csv
     
-    sleep(15*random.poisson(20)) # wait a random amount of time; approx 5 min
+    delay = 15*random.poisson(20)
+    
+    print("sleep for " + str(delay) + " seconds\n")
+    
+    sleep(delay) # wait a random amount of time; approx 5 min
