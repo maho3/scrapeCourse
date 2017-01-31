@@ -6,10 +6,10 @@ import pandas as pd
 
 
 def alert(row): # send email with information in row
-    ADDR = "dummymattho@gmail.com" # don't steal my dummy account
-    passw = "dummyaccount"
+    ADDR = "EMAIL_HERE@EMAIL.com" # don't steal my dummy account
+    passw = "PASSWORD_HERE"
 
-    content = (row['Dept']+ ' ' + row['Course'] + ', CRN: ' + row['CRN'] + ', is available \n\nIt may not be immediately apparent on Course Explorer, as that site only refreshes every 20 min.')
+    content = ('\n' + row['Dept']+ ' ' + row['Course'] + ', CRN: ' + row['CRN'] + ', is available \n\nIt may not be immediately apparent on Course Explorer, as that site only refreshes every 20 min.')
     
     mail = smtplib.SMTP('smtp.gmail.com',587) 
     mail.ehlo()
